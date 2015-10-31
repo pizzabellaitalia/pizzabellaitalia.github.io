@@ -1,0 +1,513 @@
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Pizza Bella Italia :: Menú</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.11.0.min.js"></script>
+<!-- Angular Modules -->
+<script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.js"></script>
+<script src="js/menu.js"></script>
+<!-- // End of Angular Modules -->
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }>
+</script>
+<meta name="keywords" content="Food Stuff Responsive web template, Bootstrap Web Templates, Flat Web Templates, AndriodCompatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<!--Google Fonts-->
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	</script>
+<!-- //end-smoth-scrolling -->
+<!-- animated-css -->
+		<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+		<script src="js/wow.min.js"></script>
+		<script>
+		 new WOW().init();
+		</script>
+<!-- animated-css -->
+
+</head>
+<body>
+<!--banner start here-->
+<div class="bann-two">
+	<div class="header">
+			<div class="container">
+		      <div class="header-main">
+				<div class="logo wow bounceInLeft" data-wow-delay="0.5s">
+					<a href="index.html"><img src="images/logo.jpg" alt=""></a>
+				</div>
+				<div class="head-right wow bounceInRight" data-wow-delay="0.5s">
+					<ul>
+						<li><span class="phon"> </span><h4>Delivery<br>  2413-0975<br>  2413-2879</h4></li>
+						<li><a href="https://www.facebook.com/Pizza-Bella-Italia-130883743929426/timeline/" target="blank"><span class="facebook"> </span>Síguenos en Facebook</a></li>
+					</ul>
+				</div>
+			  <div class="clearfix"> </div>
+			</div>
+			<div class="bann-two-main">
+				<h2>Tu Mejor Elección</h2>
+			</div>
+		</div>
+	</div>
+</div>
+<!--baner end here-->
+<!--navgation start here-->
+<div class="navgation">
+	<div class="fixed-header">
+				<div class="top-nav">
+						<span class="menu"> </span>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="menu.html" class="active">Nuestro Menú</a></li>
+						<li><a href="sucursales.html">Sucursales</a></li>
+						<li><a href="eventos.html">Eventos</a></li>
+						<li><a href="promociones.html">Promociones</a></li>
+						<li><a href="galeria.html">Galería de Fotos</a></li>
+					</ul>
+				<!-- script-nav -->
+			<script>
+			$("span.menu").click(function(){
+				$(".top-nav ul").slideToggle(500, function(){
+				});
+			});
+			</script>
+			<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){		
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+						});
+					});
+					</script>
+				<!-- //script-nav -->
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	<!--script-->
+			<!-- script-for sticky-nav -->
+		<script>
+		$(document).ready(function() {
+			 var navoffeset=$(".navgation").offset().top;
+			 $(window).scroll(function(){
+				var scrollpos=$(window).scrollTop(); 
+				if(scrollpos >=navoffeset){
+					$(".navgation").addClass("fixed");
+				}else{
+					$(".navgation").removeClass("fixed");
+				}
+			 });
+			 
+		});
+		</script>
+		<!-- /script-for sticky-nav -->
+
+<!--navgaton end here-->
+<!--manu start here-->
+<span ng-app="app">
+	<span ng-controller="menuController">
+<div class="menu">
+	<div class="container">
+		<div class="menu-main">
+			<div class="menu-head">
+			  <h3>Nuestro Menú</h3>
+			  <p>Te ofrecemos un variado menú con una selección cuidadosa de ingredientes frescos y de la mejor calidad para la elaboración de Pizzas, Pupusas, Tortas, Hamburguesas y Bebidas Frías y Calientes.</p>
+			</div>
+			<div class="menu-top">
+			<div ng-hide="panVisibility">
+				<div ng-hide="calzoneVisibility">
+				<div ng-hide="pizzaVisibility" class="menu-top-grids mgd1 wow bounceInRight" data-wow-delay="0.5s">
+				<h3>Pizzas</h3>
+					<div class="col-md-4 menu-items">
+						<img src="images/pizza.jpg" alt="" class="img-responsive">
+						<h4><a href="" ng-click="showPizza()">Pizzas</a></h4>
+					</div>
+					<div class="col-md-4 menu-items">
+						<img src="images/calzone.jpg" alt="" class="img-responsive">
+						<h4><a href="" ng-click="showCalzone()">Pizza Calzone</a></h4>
+					</div>
+					<div class="col-md-4 menu-items">
+						<img src="images/panConAjo.jpg" alt="" class="img-responsive">
+						<h4><a href="#panConAjo" ng-click="showPan()">Pan con Ajo</a></h4>
+					</div>
+				    <div class="clearfix"> </div>
+				</div>
+				</div>
+				</div>
+				<div id="pizzas" ng-show="pizzaVisibility" class="menu-submenu">
+						<h4 align="center">Pizzas</h4>
+						<table style="width:100%">
+						<tr>
+						<td style="width:40%"></td>
+							<td><h5>Personal</h5> <br> 6 porciones</td>
+							<td><h5>Mediana</h5><br> 8 porciones</td>
+							<td><h5>Familiar</h5> <br> 12 porciones</td>
+							<td><h5>Gigante</h5> <br> 14 porciones</td>
+						</tr>
+						<tr>
+							<td><h6>Italia 1</h6>
+							<img src="images/italia.png" class="img-responsive"></td>
+							<td>$3.00</td>		
+							<td>$6.95</td>
+							<td>$10.75</td>	
+							<td>$13.75</td>	
+						</tr>
+						<tr> <td>Pepperoni, Salami, Carne, Chile y Cebolla</td>
+						</tr>			
+						<tr>
+							<td><br><h6>Exquisita</h6>
+							<img src="images/exquisita.png" class="img-responsive"></td>
+							<td>$3.15</td>		
+							<td>$6.90</td>
+							<td>$10.95</td>	
+							<td>$14.40</td>	
+						</tr>
+						<tr> <td>Pepperoni, Jamón, Salami, Tocino y Carne</td>
+						</tr>		
+						<tr>
+							<td><br><h6>Suprema</h6>
+							<img src="images/suprema.png" class="img-responsive"></td>
+							<td>$2.95</td>		
+							<td>$6.90</td>
+							<td>$10.75</td>	
+							<td>$13.70</td>	
+						</tr>
+						<tr> <td>Jamón, Pepperoni, Hongos y Cebolla</td>
+						</tr>		
+						<tr>
+							<td><br><h6>Italia Full</h6>
+							<img src="images/italiaFull.png" class="img-responsive"></td>
+							<td>$3.60</td>		
+							<td>$7.50</td>
+							<td>$11.50</td>	
+							<td>$15.00</td>	
+						</tr>
+						<tr> <td>Pepperoni, Jamón, Carne, Salami, Tocino, Chile Verde, Cebolla y Hongos</td>
+						</tr>		
+						<tr>
+							<td><br><h6>La Capricciosa</h6>
+							<img src="images/capricciosa.png" class="img-responsive"></td>
+							<td>$2.80</td>		
+							<td>$6.75</td>
+							<td>$11.00</td>	
+							<td>$13.80</td>	
+						</tr>
+						<tr> <td>4 Ingredientes de tu Elección</td>
+						</tr>		
+						<tr>
+							<td><br><h6>Vegetariana</h6>
+							<img src="images/pizzaVegetariana.png" class="img-responsive"></td>
+							<td>$3.00</td>		
+							<td>$6.90</td>
+							<td>$11.55</td>	
+							<td>$14.25</td>	
+						</tr>
+						<tr> <td>Tomate, Cebolla, Chile Verde, Hongos, Aceitunas y Loroco</td>
+						</tr>		
+						<tr>
+							<td><br><h6>Margarita</h6>
+							<img src="images/margarita.png" class="img-responsive"></td>
+							<td>$2.95</td>		
+							<td>$5.50</td>
+							<td>$9.50</td>	
+							<td>$12.45</td>	
+						</tr>
+						<tr> <td>En masa extra delgada, una deliciosa combinación de Tomate y Albahaca</td>
+						</tr>		
+						<tr>
+							<td><br><h6>Hawaiana</h6>
+							<img src="images/hawaiana.png" class="img-responsive"></td>
+							<td>$2.85</td>		
+							<td>$6.50</td>
+							<td>$10.00</td>	
+							<td>$12.85</td>	
+						</tr>
+						<tr> <td>Jamón, Piña y Tocino</td>
+						</tr>		
+						<tr>
+							<td><br><h6>Pizza de 1 Ingrediente</h6>
+							<img src="images/1ingrediente.png" class="img-responsive"></td>
+							<td>$2.85</td>		
+							<td>$5.00</td>
+							<td>$7.75</td>	
+							<td>$10.00</td>	
+						</tr>
+						<tr> <td>El ingrediente de tu elección</td>
+						</tr>		
+						<tr>
+							<td><br><h6>Pizza de 2 Ingredientes</h6>
+							<img src="images/2ingredientes.png" class="img-responsive"></td>
+							<td>$2.55</td>		
+							<td>$5.50</td>
+							<td>$8.75</td>	
+							<td>$11.00</td>	
+						</tr>
+						<tr> <td>Elige entre nuestras combinaciones: Jamón y Hongos, Chorizo y Hongos, Loroco y Jamón, Camarón y Hongos, Carne y Jalapeño, Albahaca y Hongos</td>
+						</tr>		
+						<tr>
+							<td><br><h6>Ingrediente Extra</h6>
+							<img src="images/ingredienteExtra.png" class="img-responsive"></td>
+							<td>$0.30</td>		
+							<td>$0.50</td>
+							<td>$0.75</td>	
+							<td>$1.00</td>	
+						</tr>
+						<tr> <td>Añade tu ingrediente favorito y arma tu propia especialidad</td>
+						</tr>		
+						<tr>
+							<td><br><h6>Queso Mozarela Extra</h6>
+							<img src="images/extraQueso.jpg" class="img-responsive"></td>
+							<td>$1.10</td>		
+							<td>$2.20</td>
+							<td>$2.75</td>	
+							<td>$3.25</td>	
+						</tr>
+						<tr> <td>Los amantes del queso extra deben pedirlo</td>
+						</tr>		
+						<tr>
+							<td><br><h6>Queso Parmesano Extra</h6>
+							<img src="images/parmesano.png" class="img-responsive"></td>
+							<td colspan="4">Pide tus bolsitas extras de queso por solo $0.25 cada una</td>
+						</tr>		
+						</table>
+						<br><br>
+						<section align="center">
+							<input type="button" value="Cerrar" ng-click="hidePizza()">
+						</section>
+				</div>
+				<div id="calzone" ng-show="calzoneVisibility" class="menu-submenu">
+						<h4 align="center">Pizza Calzone</h4>
+						<section align="center">
+						<img src="images/pizzaCalzone.png" class="img-responsive"><br><br><br>
+						</section>
+						<table style="width:100%">
+						<tr>
+						<td style="width:40%"></td>
+							<td><h5>Personal</h5></td>
+							<td><h5>Mediana</h5></td>
+							<td><h5>Familiar</h5></td>
+						</tr>
+						<tr>
+							<td><h6>De 1 Ingrediente</h6></td>
+							<td>$2.75</td>		
+							<td>$5.00</td>
+							<td>$9.00</td>	
+						</tr>			
+						<tr>
+							<td><br><h6>Calzone Full</h6></td>
+							<td>$3.50</td>		
+							<td>$8.80</td>
+							<td>$12.00</td>	
+						</tr>		
+						</table>
+						<br><br>
+						<section align="center">
+						<input type="button" value="Cerrar" ng-click="hideCalzone()">
+						</section>
+				</div>
+				<div id="panConAjo" ng-show="panVisibility" class="menu-submenu">
+						<h4 align="center">Pan con Ajo</h4>
+						<table style="width:100%">
+						<tr>
+						<td style="width:40%"></td>
+							<td><h5>Pequeño</h5> <br> 3 Rodajas</td>
+							<td><h5>Grande</h5> <br> 5 Rodajas</td>
+						</tr>
+						<tr>
+							<td><h6>Normal</h6>
+							<img src="images/panNormal.png" class="img-responsive"></td>
+							<td>$1.70</td>		
+							<td>$2.80</td>
+						</tr>
+						<tr> <td>Tu con pan solo con pasta de ajo</td>
+						</tr>			
+						<tr>
+							<td><br><h6>Especial</h6>
+							<img src="images/panEspecial.png" class="img-responsive"></td>
+							<td>$2.00</td>		
+							<td>$3.50</td>
+						</tr>	
+						<tr><td>Pasta de Ajo más Queso Mozarella</td></tr>
+						<tr>
+							<td><h6><br>Supremo</h6>
+							<img src="images/panSupremoMenu.png" class="img-responsive"></td>
+							<td>$2.50</td>		
+							<td>$4.25</td>
+						</tr>
+						<tr> <td>Pasta de Ajo + Queso Mozarella + 1 Ingrediente</td>
+						</tr>	
+						</table>
+						<br><br>
+						<section align="center">
+							<input type="button" value="Cerrar" ng-click="hidePan()">
+						</section>
+				</div>
+			</div>
+	</div>
+</div>
+<div class="menu-top">
+<div class="container">
+				<div ng-hide="pupusasVisibility" class="menu-top-grids">
+				<br><br><br>
+				<h3>Pupusas</h3>
+				<div class="menu-top-grids wow bounceInLeft" data-wow-delay="0.5s">
+					<div class="col-md-4 menu-items">
+						<img src="images/pupusasMaiz.jpg" alt="" class="img-responsive">
+						<h4>Pupusas de Maíz</h4>
+					</div>
+					<div class="col-md-4 menu-items">
+						<img src="images/pupusasArroz.jpg" alt="" class="img-responsive">
+						<h4>Pupusas de Arroz</h4>
+					</div>
+					<div class="col-md-4 menu-items">
+						<img src="images/pupusasIngredientes.jpg" alt="" class="img-responsive">
+						<h4><a href="" ng-click="showPupusas()">Especialidades</a></h4>
+					</div>
+				  <div class="clearfix"></div>
+				</div>
+				</div>
+				<div id="pupusas" ng-show="pupusasVisibility" class="menu-submenu">
+				<br><br><br>
+						<h4 align="center">Especialidades de Pupusas de Arroz y Maíz</h4>
+						<table style="width:80%" align="center">
+						<tr>
+						<td rowspan="13" style="width:30%"><img src="images/pupusasMenu.png" alt="" class="img-responsive"></td>
+						<td>Queso</td><td>$0.65</td>
+						</tr>
+						<tr><td>Queso con Loroco</td><td>$0.70</td></tr>
+						<tr><td>Hongos con Queso</td><td>$0.65</td></tr>	
+						<tr><td>Jalapeño con Queso</td><td>$0.70</td></tr>
+						<tr><td>Camarón con Queso</td><td>$0.70</td></tr>
+						<tr><td>Papelillo</td><td>$0.65</td></tr>
+						<tr><td>Ayote</td><td>$0.65</td></tr>
+						<tr><td>Revueltas</td><td>$0.60</td></tr>
+						<tr><td>Frijol con Queso</td><td>$0.60</td></tr>
+						<tr><td>Chicharrón con Queso</td><td>$0.65</td></tr>
+						<tr><td>Pollo con Queso</td><td>$0.65</td></tr>
+						<tr><td>Otras Especialidades</td><td>$0.65</td></tr>
+						<tr><td>Pupusas de 2 Ingredientes</td><td>$0.75</td></tr>
+						</table>
+						<br><br>
+						<section align="center">
+						<input type="button" value="Cerrar" ng-click="hidePupusas()">
+						</section>
+				</div>
+			</div>
+			</div>
+<div class="menu-top mgd4">
+	<div class="container">
+		<div ng-hide="hamburguerVisibility" class="menu-main">
+				<h3>Antojitos</h3>
+				<div class="menu-top-grids wow bounceInLeft" data-wow-delay="0.5s">
+					<div class="col-md-4 menu-items">
+						<img src="images/hamburguesas.jpg" alt="" class="img-responsive">
+						<h4>Hamburguesas</h4>
+					</div>
+					<div class="col-md-4 menu-items">
+						<img src="images/tortas.jpg" alt="" class="img-responsive">
+						<h4>Tortas</h4>
+					</div>
+					<div class="col-md-4 menu-items">
+						<img src="images/especial.jpg" alt="" class="img-responsive">
+						<h4><a href="" ng-click="showHamburguer()">Especialidades</a></h4>
+					</div>
+				  <div class="clearfix"> </div>
+				</div>
+			</div>
+	   </div>
+	   <div id="tortas" ng-show="hamburguerVisibility" class="menu-submenu">
+						<h4 align="center">Hamburguesas y Tortas</h4>
+						<table style="width:60%" align="center">
+						<tr>
+						<td><h6>Torta Ranchera</h6>
+						<img src="images/ranchera.png" alt="" class="img-responsive"><br>
+						 Frijoles, Carne, Chorizo, Salsa Picante y Queso</td><td colspan="2">$2.75</td>
+						</tr>
+						<tr><td><br><h6>Torta Mexicana</h6><img src="images/mexicana.png" alt="" class="img-responsive"><br>Carne, Aguacate, Queso, Chirmol y Cebolla Curtida</td><td colspan="2">$2.50</td></tr>
+						<tr><td><br><h6>Torta Mozarella</h6><img src="images/mozarella.png" alt="" class="img-responsive"><br>Jamón, Queso Mozarella, Queso Amarillo y Mayonesa</td><td colspan="2">$2.60</td></tr>	
+						<tr><td><br><h6>Torta Sencilla</h6><img src="images/sencilla.png" alt="" class="img-responsive"><br>Carne, Aguacate, Escabeche, Queso Parmesano, Aderezos y Jamón</td><td colspan="2">$2.75</td></tr>
+						<tr><td><br><h6>Hamburguesa</h6><img src="images/hamburguesaMenu.png" alt="" class="img-responsive"><br></td><td>  Normal  <br> $1.50</td><td>  Grande  <br> $2.75</td></tr>
+						<tr><td><br><h6>Orden de Burritos</h6><img src="images/burritos.png" alt="" class="img-responsive"><br></td><td>  Normales  <br> $3.00</td><td>  Mixtos  <br> $3.50</td></tr>
+						</table>
+						<br><br>
+						<section align="center">
+						<input type="button" value="Cerrar" ng-click="hideHamburguer()">
+						</section>
+				</div>
+	</div>
+<div class="menu-cash">
+		<div class="container">
+			<div class="menu-cash-main wow bounceInRight" data-wow-delay="0.5s">
+				<h3>Bebidas</h3>
+				<div class="col-md-6 menu-left">
+					<ul>
+					<li class="bebidas">Bebidas Frías</li>
+						<li>Gaseosa Normal -------------- $0.50 </li>
+						<li>Gaseosa Lata ------------------ $0.60 </li>
+						<li>Gaseosa 1.5 Lt. ---------------- $1.25 </li>
+						<li>Té de Flor de Jamaica ------- $1.00 </li>
+						<li>Horchata ------------------------- $0.60 </li>
+						<li>Cebada -------------------------- $0.60 </li>
+						<li>Licuado de Fresa ------------- $1.25 </li>
+						<li>Licuado de Guineo ----------- $1.25 </li>
+						<li>Espumoso Chocolate -------- $1.30 </li>
+						<li>Jugo Enlatado ----------------- $0.60 </li>
+						<li>Adrenaline ---------------------- $1.75 </li>
+						<li>Gatorade ------------------------ $1.10 </li>
+						<li>Agua 750 ml -------------------- $0.60 </li>
+						<li>Agua Bolsa --------------------- $0.20 </li>
+						<li>Agua 300 ml ------------------- $0.35 </li>
+						<li>Bebida Frutado ---------------- $0.50 </li>
+						<li>Yogurt Líquido ----------------- $0.65 </li>
+						<li>Té Lipton Sabores ------------ $1.10 </li>
+						<li>Jugo V8 ------------------------- $1.30 </li>
+					<li class="bebidas">Bebidas Calientes</li>
+						<li>Café ------------------------------ $0.30 </li>
+						<li>Chocolate ----------------------- $0.50 </li>
+					</ul>
+				</div>
+				<div class="col-md-6 menu-right">
+					<br>
+					<br>
+					<img src="images/bebidas2.jpg" alt="" class="img-responsive">
+					<br>
+					<img src="images/bebidas3.png" alt="" class="img-responsive">
+				</div>
+			   <div class="clearfix"> </div>
+			</div>
+	  </div>
+</div>
+
+</div>
+<!--menu end here-->
+<!--footer start here-->
+<div class="footer">
+	<div class="container">
+		<div class="copyright">
+			<p>2015 Pizza Bella Italia. Todos los Derechos Reservados.</p>
+		</div>
+	</div>
+</div>
+</span>
+</span>
+<!--footer end here-->
+</body>
+</html>
